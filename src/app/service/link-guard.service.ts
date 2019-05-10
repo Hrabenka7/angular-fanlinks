@@ -42,6 +42,8 @@ export class LinkGuard implements CanActivate {
 
     if (!permitted) {
       this.router.navigate(['/errorpage']);
+    } else {
+      return permitted;
     }
 
     // console.log('path', next.params.name);

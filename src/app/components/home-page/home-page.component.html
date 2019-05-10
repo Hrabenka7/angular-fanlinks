@@ -2,10 +2,15 @@
 <html>
 <body>
 
-<p>Bienvenido al nuevo repositorio de la</p>
-<h1>ATML</h1>
+<p class="bold">Bienvenido al nuevo repositorio de la</p>
+<h1 class="heading"> 
+  <span class="red">A</span>
+  <span class="orange">F</span>
+  <span class="yellow">L</span>
+  <span class="green">M</span>
+</h1>
 
-<div *ngFor="let button of buttonArray">
+<div *ngFor="let button of buttons">
   <button><a routerLink='{{button.nameEng}}'>
     {{button.name}}</a></button>
 </div>

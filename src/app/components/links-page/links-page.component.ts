@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 export class LinksPageComponent implements OnInit {
 
   categoryName: string;
+  isLoaded: boolean;
 
   constructor(private route: ActivatedRoute, private location: Location) { }
 
@@ -31,7 +32,7 @@ export class LinksPageComponent implements OnInit {
       sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
     }
 
-
+    this.isLoaded = true;
   }
 
   childLinkClicked(linkData) {

@@ -9,20 +9,14 @@ export class HomePageComponent implements OnInit {
 
   constructor() { }
 
-  buttonArray: Array<any>;
+  buttons: Array<any>;
 
   ngOnInit() {
-    this.buttonArray = [{ name: 'Animales', nameEng: 'animals'},
+    this.buttons = [{ name: 'Animales', nameEng: 'animals'},
       { name: 'Libros', nameEng: 'books'},
       { name: 'Musica', nameEng: 'music'},
       { name: 'Salud', nameEng: 'health'}
   ];
-
-    // if (sessionStorage.getItem('visitedUrls') === null) {
-    //   console.log('entered sessionStorage');
-    //   const visitedUrls = [];
-    //   sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
-    // }
 
   }
 
