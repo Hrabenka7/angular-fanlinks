@@ -3,8 +3,8 @@
     <th>Nombre</th>
     <th>Description</th>
   </tr>
-  <tr *ngFor="let link of sampleArray">
-    <td>{{link.name}}</td>
-    <td>{{link.desc}}</td>
+  <tr *ngFor="let link of linksArray" (click)="onClick(link)">
+    <td>{{link.API}}</td>
+    <td>{{link.Description}}</td>
   </tr>
 </table>

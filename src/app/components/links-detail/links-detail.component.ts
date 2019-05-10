@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-links-detail',
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinksDetailComponent implements OnInit {
 
+  @Input() passedLinkData: Event;
+
   constructor() { }
 
   ngOnInit() {
-
   }
 
 }
+
+
+

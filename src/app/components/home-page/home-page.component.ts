@@ -12,10 +12,10 @@ export class HomePageComponent implements OnInit {
   buttonArray: Array<any>;
 
   ngOnInit() {
-    this.buttonArray = [{ name: 'Animales', link: 'https://en.wikipedia.org/wiki/Animal'},
-      { name: 'Libros', link: 'https://en.wikipedia.org/wiki/Book'},
-      { name: 'Musica', link: 'https://en.wikipedia.org/wiki/Music'},
-      { name: 'Salud', link: 'https://en.wikipedia.org/wiki/Health'}
+    this.buttonArray = [{ name: 'Animales', nameEng: 'animals'},
+      { name: 'Libros', nameEng: 'books'},
+      { name: 'Musica', nameEng: 'music'},
+      { name: 'Salud', nameEng: 'health'}
   ];
   }
 

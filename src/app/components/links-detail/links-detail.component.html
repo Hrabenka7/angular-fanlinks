@@ -3,14 +3,18 @@
 <body>
 
 
-<div>
+<div *ngIf="!passedLinkData">
+  <p> Selecciona un enlace</p>
+</div>
+
+<div *ngIf="passedLinkData">
   <label>Nombre</label>
-  <textarea>Clicked Link Name</textarea>
+  <textarea>{{passedLinkData.API}}</textarea>
   <label>Description</label>
-  <textarea>ClickedLink Description</textarea>
+  <textarea>{{passedLinkData.Description}}</textarea>
   <label>Autor</label>
-  <textarea>Autor of ClickedLink</textarea>
-    <button><a href="">Navegar</a></button>
+  <textarea>?</textarea>
+    <button><a href={{passedLinkData.Link}}>Navegar</a></button>
 </div>
 
 </body>
