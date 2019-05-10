@@ -10,6 +10,7 @@ import { LinksDetailComponent } from './components/links-detail/links-detail.com
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LinksPageComponent } from './components/links-page/links-page.component';
 import { LinksService } from './service/links.service';
+import { LinkGuard } from './service/link-guard.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { LinksService } from './service/links.service';
     routing,
     HttpClientModule
   ],
-  providers: [LinksService],
+  providers: [LinksService, LinkGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

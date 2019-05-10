@@ -17,6 +17,13 @@ export class HomePageComponent implements OnInit {
       { name: 'Musica', nameEng: 'music'},
       { name: 'Salud', nameEng: 'health'}
   ];
+
+    // if (sessionStorage.getItem('visitedUrls') === null) {
+    //   console.log('entered sessionStorage');
+    //   const visitedUrls = [];
+    //   sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
+    // }
+
   }
 
 }

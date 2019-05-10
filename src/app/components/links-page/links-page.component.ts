@@ -17,6 +17,21 @@ export class LinksPageComponent implements OnInit {
 
   ngOnInit() {
     this.categoryName = this.route.snapshot.paramMap.get('name');
+    console.log('catname', this.categoryName);
+    const visitedUrls = JSON.parse(sessionStorage.getItem('visitedUrls'));
+    console.log('visitedUrls', visitedUrls);
+
+    const exist = visitedUrls.find(url => {
+      return url === this.categoryName;
+    });
+
+    if (!exist) {
+      console.log('entered');
+      visitedUrls.push(this.categoryName);
+      sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
+    }
+
+
   }
 
   childLinkClicked(linkData) {
