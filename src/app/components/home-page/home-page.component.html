@@ -2,18 +2,18 @@
 <html>
 <body>
 
-<p class="bold">Bienvenido al nuevo repositorio de la</p>
-<h1 class="heading"> 
-  <span class="red">A</span>
-  <span class="orange">F</span>
-  <span class="yellow">L</span>
-  <span class="green">M</span>
-</h1>
+  <h2 class="bold">Bienvenido al nuevo repositorio de la</h2>
+  <h1 class="heading"> 
+    <span class="red">A</span>
+    <span class="orange">F</span>
+    <span class="yellow">L</span>
+    <span class="green">M</span>
+  </h1>
 
-<div *ngFor="let button of buttons">
-  <button><a routerLink='{{button.nameEng}}'>
-    {{button.name}}</a></button>
-</div>
+  <div *ngFor="let button of buttons" class="inline">
+    <a class="button" routerLink='{{button.nameEng}}'>
+      {{button.name}}</a>
+  </div>
 
 </body>
 </html>

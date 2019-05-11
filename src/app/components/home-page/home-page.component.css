@@ -1,7 +1,19 @@
+body {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.inline{
+  display: inline;
+}
 
 .heading {
-  font-size: 80px;
+  font-size: 300px;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  margin-bottom: 25px;
 }
 
 .red {
@@ -27,3 +39,8 @@
 .bold{
   font-weight: 700;
 }
+
+.button {
+  margin: 20px;
+}
+
