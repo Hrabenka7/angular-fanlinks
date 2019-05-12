@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
 
+<body>
   <h2 class="bold">Bienvenido al nuevo repositorio de la</h2>
   <h1 class="heading"> 
     <span class="red">A</span>
@@ -11,9 +9,7 @@
   </h1>
 
   <div *ngFor="let button of buttons" class="inline">
-    <a class="button" routerLink='{{button.nameEng}}'>
+    <a class="button" routerLink='{{button.nameEng}}' (click)=onClick(button.name)>
       {{button.name}}</a>
   </div>
-
 </body>
-</html>

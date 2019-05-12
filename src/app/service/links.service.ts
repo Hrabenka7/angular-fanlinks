@@ -6,8 +6,13 @@ import { Location } from '@angular/common';
   providedIn: 'root'
 })
 
-
 export class LinksService {
+
+  categories = [{ name: 'Animales', nameEng: 'animals' },
+    { name: 'Libros', nameEng: 'books' },
+    { name: 'Musica', nameEng: 'music' },
+    { name: 'Salud', nameEng: 'health' }];
+
   constructor(private http: HttpClient, private location: Location) { }
   getFanLinks(category) {
     const observable = this.http.get(`https://api.publicapis.org/entries?category=${category}`);

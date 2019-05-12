@@ -10,6 +10,7 @@ import { LinksService } from '../../service/links.service';
 export class LinksPageComponent implements OnInit {
 
   categoryName: string;
+  heading: string;
 
   constructor(private route: ActivatedRoute, private linkService: LinksService) { }
 
@@ -17,6 +18,15 @@ export class LinksPageComponent implements OnInit {
 
   ngOnInit() {
     this.categoryName = this.route.snapshot.paramMap.get('name');
+
+    this.linkService.categories.filter( el => {
+      if (el.nameEng === this.categoryName) {
+        this.heading = el.name;
+      }
+
+    });
+    console.log('heading', this.heading);
+
     const visitedUrls = JSON.parse(sessionStorage.getItem('visitedUrls'));
 
     const exist = visitedUrls.find(url => {
