@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<div *ngIf="!isLoaded">Loading...</div>
-
-<div *ngIf="isLoaded">
-  <button (click)="navigateBack()">Volver</button>
+  <div class="col-12 header">
+    <div class="col-3">
+      <a class="button" (click)="navigateBack()"> Volver </a>
+    </div>
+    <div class="col-9">
+      <h2> {{categoryName}} </h2>
+    </div>
+  </div>
   
-  <h1>{{categoryName}}</h1>
+  <div class="col-12 wrapper">
+    <div class="col-8 table-column">
+      <app-links-table (linkClicked)="childLinkClicked($event)"></app-links-table>
+    </div>
+    <div class="col-4">
+      <app-links-detail [passedLinkData]="clickedLink"></app-links-detail>
+    </div>
+  </div>
   
-  <app-links-table (linkClicked)="childLinkClicked($event)"></app-links-table>
-  <app-links-detail [passedLinkData]="clickedLink" ></app-links-detail>
-</div>
-
-
-
-</body>
-</html>

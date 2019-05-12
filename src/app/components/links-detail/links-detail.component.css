@@ -1,0 +1,16 @@
+textarea{
+  width: 65%;
+  height: 50px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.last{
+  margin-bottom: 40px;
+}
+
+.description {
+  height: 160px;
+}

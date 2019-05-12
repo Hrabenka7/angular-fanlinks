@@ -8,13 +8,21 @@
 </div>
 
 <div *ngIf="passedLinkData">
-  <label>Nombre</label>
-  <textarea>{{passedLinkData.API}}</textarea>
-  <label>Description</label>
-  <textarea>{{passedLinkData.Description}}</textarea>
-  <label>Autor</label>
-  <textarea>?</textarea>
-    <button><a href={{passedLinkData.Link}}>Navegar</a></button>
+  <div>
+    <p>Nombre</p>
+    <textarea>{{passedLinkData.API}}</textarea>
+  </div>
+  <div>
+    <p>Description</p>
+    <textarea class="description">{{passedLinkData.Description}}</textarea>
+  </div>
+  <div class="last">
+    <p>Autor</p>
+    <textarea>?</textarea>
+  </div>
+  <div>
+    <a class="button" href={{passedLinkData.Link}}>Navegar</a>
+  </div>
 </div>
 
 </body>

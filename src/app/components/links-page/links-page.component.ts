@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { LinksService } from '../../service/links.service';
 
 @Component({
   selector: 'app-links-page',
@@ -10,29 +10,24 @@ import { Location } from '@angular/common';
 export class LinksPageComponent implements OnInit {
 
   categoryName: string;
-  isLoaded: boolean;
 
-  constructor(private route: ActivatedRoute, private location: Location) { }
+  constructor(private route: ActivatedRoute, private linkService: LinksService) { }
 
   public clickedLink: Event;
 
   ngOnInit() {
     this.categoryName = this.route.snapshot.paramMap.get('name');
-    console.log('catname', this.categoryName);
     const visitedUrls = JSON.parse(sessionStorage.getItem('visitedUrls'));
-    console.log('visitedUrls', visitedUrls);
 
     const exist = visitedUrls.find(url => {
       return url === this.categoryName;
     });
 
     if (!exist) {
-      console.log('entered');
       visitedUrls.push(this.categoryName);
       sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
     }
 
-    this.isLoaded = true;
   }
 
   childLinkClicked(linkData) {
@@ -41,7 +36,7 @@ export class LinksPageComponent implements OnInit {
   }
 
   navigateBack() {
-    this.location.back();
+    this.linkService.navigateBack();
   }
 
 }

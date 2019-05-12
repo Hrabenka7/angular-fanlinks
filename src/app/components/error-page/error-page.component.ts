@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinksService } from '../../service/links.service';
 
 @Component({
   selector: 'app-error-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private linkService: LinksService) { }
 
   ngOnInit() {
   }
 
+  navigateBack() {
+    this.linkService.navigateBack();
+  }
 }
