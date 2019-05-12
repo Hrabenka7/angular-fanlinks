@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (sessionStorage.getItem('visitedUrls') === null) {
-      console.log('entered sessionStorage');
       const visitedUrls = [];
       sessionStorage.setItem('visitedUrls', JSON.stringify(visitedUrls));
     }

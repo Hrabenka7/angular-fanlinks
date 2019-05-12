@@ -19,14 +19,11 @@ export class LinksTableComponent implements OnInit {
   ngOnInit() {
     this.categoryName = this.route.snapshot.paramMap.get('name');
     this.linkservice.getFanLinks(this.categoryName).subscribe(data => {
-      console.log('data', data);
       this.linksArray = data['entries'];
-      console.log(this.linksArray);
     });
   }
 
   onClick(linkData) {
-    console.log('event', linkData);
     this.linkClicked.emit(linkData);
   }
 

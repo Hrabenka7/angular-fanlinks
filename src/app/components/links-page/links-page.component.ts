@@ -25,7 +25,6 @@ export class LinksPageComponent implements OnInit {
       }
 
     });
-    console.log('heading', this.heading);
 
     const visitedUrls = JSON.parse(sessionStorage.getItem('visitedUrls'));
 
@@ -41,7 +40,6 @@ export class LinksPageComponent implements OnInit {
   }
 
   childLinkClicked(linkData) {
-    console.log('child event', linkData);
     this.clickedLink = linkData;
   }
 

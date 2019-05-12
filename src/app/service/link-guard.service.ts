@@ -45,11 +45,5 @@ export class LinkGuard implements CanActivate {
     } else {
       return permitted;
     }
-
-    // console.log('path', next.params.name);
-    // const storedArray = JSON.parse(sessionStorage.getItem('arrayLinks'));
-    // console.log('storedArray', storedArray);
-    // console.log('session', window.sessionStorage);
-    // return true;
   }
 }
